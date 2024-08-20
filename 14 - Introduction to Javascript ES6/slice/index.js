@@ -1,0 +1,5 @@
+tweet =  prompt("compose your tweet")
+console.log(tweet)
+var tweetCount = tweet.slice(0,140)
+console.log(tweetCount)
+console.log("You have allowed to write " + tweetCount.length +  " characters, you have inputed" +  tweet.length + " characters ")
