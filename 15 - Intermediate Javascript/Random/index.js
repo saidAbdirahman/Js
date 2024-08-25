@@ -3,4 +3,10 @@ var women = prompt('enter women name')
 var loveScore = Math.random();
 loveScore = loveScore * 100
 loveScore = Math.floor(loveScore) + 1;
-alert(loveScore + '%')
+
+if(loveScore >= 70){
+    alert('Your love score is ' + loveScore + '%' + ' You love each other like qaays love layla')
+}else{
+    alert('Your love score is ' + loveScore + '%' )
+
+}
