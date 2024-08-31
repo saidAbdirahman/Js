@@ -14,7 +14,7 @@
 
     <button style=":active color:red;">Click Me</button>
 
-    <ul>
+    <ul id="list">
       <li class="list">
         <a href="https://www.google.com">Google</a>
       </li>
@@ -22,22 +22,9 @@
       <li class="list">Third</li>
     </ul>
     <script >
-//       alert("hi")
-//       document.lastElementChild.lastElementChild
-// <body>​<h1>​Hello​</h1>​<input type=​"checkbox">​<button style=​":​active color:​red;​">​Click Me​</button>​<ul>​…​</ul>​</body>​
-// document.lastElementChild.lastElementChild.lastElementChild
-// <ul>​…​</ul>​
-// document.lastElementChild.lastElementChild.lastElementChild.lastElementChild
-// <li class=​"list">​::marker​"Third"</li>​
-// var third = document.lastElementChild.lastElementChild.lastElementChild.lastElementChild
-// undefined
-// third
-// <li class=​"list">​…​</li>​
-// third.inn
-// undefined
-// third.innerHTML="said"
-// 'said'
-      
+      var li = document.querySelectorAll("#list li a")[0]
+      li.style.color = "black"
+      console.log(li)
 
     </script>
 
