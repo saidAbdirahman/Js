@@ -3,6 +3,7 @@ for(var i = 0; i < document.querySelectorAll(".drum").length; i++){
     document.querySelectorAll("button")[i].addEventListener("click",function(){ 
         var buttonInnerHTML = this.innerHTML;
         makeSound(buttonInnerHTML)
+        buttonAnimation(buttonInnerHTML)
         
     })
    
@@ -13,6 +14,7 @@ addEventListener("keypress",function (e){
    
     console.log(e)
     makeSound(e.key)
+    buttonAnimation(e.key)
    
 })
 
@@ -52,6 +54,17 @@ function makeSound(key){
             alert("This word has no sound")   
     }
 }
+
+function buttonAnimation(currentKey){ 
+    var activeButton = document.querySelector("." + currentKey)
+    activeButton.classList.add("pressed")
+    
+    setTimeout(function(){ 
+        activeButton.classList.remove("pressed")
+    },100)
+}
+
+
 /*
 var audio = new Audio(`sounds/tom-1.mp3`)
     audio.play()
