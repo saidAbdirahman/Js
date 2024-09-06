@@ -1,12 +1,25 @@
 for(var i = 0; i < document.querySelectorAll(".drum").length; i++){
     
-    document.querySelectorAll("button")[i].addEventListener("click",handleClick)
-    
+    document.querySelectorAll("button")[i].addEventListener("click",function(){ 
+        var buttonInnerHTML = this.innerHTML;
+        makeSound(buttonInnerHTML)
+        
+    })
+   
 }
-function handleClick(){
+
+
+addEventListener("keypress",function (e){ 
+   
+    console.log(e)
+    makeSound(e.key)
+   
+})
+
+function makeSound(key){
     /* this.style.color = "white" */
-    var buttonInnerHTML = this.innerHTML;
-    switch(buttonInnerHTML){ 
+    
+    switch(key){ 
         case "w":
             var tom1 = new Audio(`sounds/tom-1.mp3`)
             tom1.play()
@@ -39,7 +52,6 @@ function handleClick(){
             alert("This word has no sound")   
     }
 }
-
 /*
 var audio = new Audio(`sounds/tom-1.mp3`)
     audio.play()
